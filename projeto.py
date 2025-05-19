@@ -37,8 +37,11 @@ def cadastrarcontato():
         print('ERRO na gravação do contato')
 
 def listarcontato():
-    print(f'Listar contato')
-
+    agenda = open("agenda.txt", "r")
+    for contato in agenda: 
+        print(contato)
+    agenda.close()
+    
 def deletarcontato():
     print(f'Deletar contato')
 
