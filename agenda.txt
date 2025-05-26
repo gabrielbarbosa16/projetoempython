@@ -1,3 +1,4 @@
 01& C:/Users/gaabr/AppData/Local/Programs/Python/Python313/python.exe c:/Users/gaabr/OneDrive/Documentos/GitHub/projetoempython/projeto.py;& C:/Users/gaabr/AppData/Local/Programs/Python/Python313/python.exe c:/Users/gaabr/OneDrive/Documentos/GitHub/projetoempython/projeto.py;83987109711;t@gmail.com 
 02;barbosa;83987109711;gabriel@gmail.com 
 03;rabelo;83910101010;rabelo@gmail.com 
+05;Brunet;8398888888;brunet@gmail.com 
