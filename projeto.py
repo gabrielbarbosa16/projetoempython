@@ -8,7 +8,8 @@ MENU:
 [1]CADASTRAR CONTATO
 [2]LISTAR CONTATO
 [3]DELETAR CONTATO
-[4]BUSCAR CONTATO PELO ID
+[4]BUSCAR CONTATO PELO NOME
+[5]SAIR
 
 =================================================
 ESCOLHA UMA OPÇÃO ACIMA:
@@ -19,8 +20,10 @@ ESCOLHA UMA OPÇÃO ACIMA:
         listarcontato()
     elif opcao == '3':
         deletarcontato()
+    elif opcao == "4":
+        buscarcontatopelonome()
     else:
-        buscarcontato()
+        sair()
 
 def cadastrarcontato():
     idcontato = input('Escolha ID do seu contato: ')
@@ -45,8 +48,17 @@ def listarcontato():
 def deletarcontato():
     print(f'Deletar contato')
 
-def buscarcontato():
-    print(f'Buscar contato pelo ID')
+def buscarcontatopelonome():
+    nome = input(f'Digite o nome a ser procurado: ')
+    agenda = open("agenda.txt", "r")
+    for contato in agenda: 
+        if nome in contato.split(";")[1]:
+            print(contato)
+    agenda.close()
+
+def sair():
+    print(f'Até mais.....!!!')
+    exit()
 
 def main():
     menu()
