@@ -46,7 +46,20 @@ def listarcontato():
     agenda.close()
     
 def deletarcontato():
-    print(f'Deletar contato')
+    nomedeletado = input("Digite o nome a ser deletado: ")
+    agenda = open("agenda.txt","r")
+    aux = []
+    aux2 = []
+    for i in agenda:
+        aux.append(i)
+    for i in range(0, len(aux)):
+        if nomedeletado not in aux[i]:
+            aux2.append(aux[i])
+    agenda = open("agenda.txt", "w")
+    for i in aux2:
+        agenda.write(i)
+    print(f'Contato deletado com sucesso')
+    listarcontato()
 
 def buscarcontatopelonome():
     nome = input(f'Digite o nome a ser procurado: ')
